@@ -1,7 +1,6 @@
 name: Automerge
 
 on:
-  push:
   schedule:
     # You can setup schedule here
     - cron: '6 * * * *'
