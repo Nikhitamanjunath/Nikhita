@@ -13,20 +13,20 @@ env:
   MY_REPO: https://Nikhitamanjunath:${{secrets.GITHUB_TOKEN}}@github.com/Nikhitamanjunath/Nikhita.git
 
   # replace "long-lived_branch_name" with your branch name
-  MY_BRANCH: b1
+  MY_BRANCH: b3
 
   # replace it with the path to master repo
   MASTER_REPO: https://github.com/Nikhitamanjunath/Nikhita.git
 
   # replace "master" with your master branch name
-  MASTER_BRANCH: b3
+  MASTER_BRANCH: b1
 
 jobs:
   merge:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Merge with b3
+    - name: Merge
       run: |
         git clone ${{env.MY_REPO}} -b ${{env.MY_BRANCH}} tmp
         cd tmp
